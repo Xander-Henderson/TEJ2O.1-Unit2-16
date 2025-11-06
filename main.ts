@@ -21,9 +21,13 @@ while (true) {
         DigitalPin.P2,
         PingUnit.Centimeters
     )
+    basic.showIcon(IconNames.Happy)
 
     if (distanceToObjest < 5) {
         radio.sendString("Too Close")
+        basic.showIcon(IconNames.No)
+    } else {
+        basic.showIcon(IconNames.Yes)
     }
 }
 
